@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id2207.group15.frontend.javafx.controller.HRDemoController">
+    <children>
+        <GridPane hgap="10.0" layoutX="143.0" layoutY="98.0" vgap="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="First Name :" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Last Name :" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Label text="Username :" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Requesting Department :" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+                <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="138.0" text="Year Of Experience :" textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+                <Label text="Title :" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label text="Department :" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Label text="Password :" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Label text="Job Title:" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                <Label text="Description :" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                <TextField fx:id="staff_fn" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <TextField fx:id="staff_ln" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <TextField fx:id="staff_un" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <TextField fx:id="recu_de" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                <TextField fx:id="recu_ye" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                <TextField fx:id="staff_pass" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <TextField fx:id="recu_ti" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                <TextField fx:id="recu_des" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                <Button fx:id="recu_sub" mnemonicParsing="false" onAction="#recuSub" text="Submit" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                <ScrollPane prefHeight="200.0" prefWidth="108.0" GridPane.rowSpan="5">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <ListView fx:id="staff_list" layoutY="-4.0" onMouseClicked="#staffList" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                            </children></AnchorPane>
+                    </content>
+                </ScrollPane>
+                <Button fx:id="recu_new" mnemonicParsing="false" onAction="#Clear" text="Clear" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                <Label alignment="CENTER" text="Recruitment Type :" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                </Label>
+                <Label text="Staff Id : " GridPane.columnIndex="3" />
+                <Label fx:id="staff_id" GridPane.columnIndex="4" />
+            <TextField fx:id="staff_ti" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="staff_add" mnemonicParsing="false" onAction="#staffUp" text="Add/Update" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5" GridPane.rowSpan="4">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="recu_list" onMouseClicked="#recruList" prefHeight="200.0" prefWidth="200.0" />
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Staff Details" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+            <Label layoutX="425.0" layoutY="18.0" text="Recruitment Id : " GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label fx:id="recu_id" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <TextField fx:id="staff_de" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextField fx:id="recu_ty" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

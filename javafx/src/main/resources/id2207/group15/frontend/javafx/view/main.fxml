@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id2207.group15.frontend.javafx.controller.MainController">
+   <children>
+       <GridPane hgap="10.0" prefHeight="400.0" prefWidth="954.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+           <columnConstraints>
+               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="302.33333333333337" minWidth="10.0" prefWidth="169.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="363.3333485921224" minWidth="0.0" prefWidth="177.66666666666669" />
+               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="363.3333485921224" minWidth="10.0" prefWidth="211.66666666666663" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <VBox alignment="CENTER" prefHeight="127.0" prefWidth="0.0" GridPane.halignment="CENTER">
+               <Label fx:id="label1" text="Label">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+               <Label fx:id="label2" text="Label">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+               <Label fx:id="label3" alignment="TOP_RIGHT" text="Label">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+           </VBox>
+         <Label text="Demo Panel" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+            <font>
+               <Font size="48.0" />
+            </font>
+         </Label>
+         <Button fx:id="cs_demo" mnemonicParsing="false" onAction="#CSDemo" prefHeight="67.0" prefWidth="138.0" text="Customer Service Demo" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
+            <font>
+               <Font size="15.0" />
+            </font></Button>
+         <Button fx:id="hr_demo" layoutX="29.0" layoutY="177.0" mnemonicParsing="false" onAction="#HRDemo" prefHeight="67.0" prefWidth="138.0" text="HR Demo" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+               <Font size="15.0" />
+            </font></Button>
+         <Button fx:id="task_demo" layoutX="220.0" layoutY="177.0" mnemonicParsing="false" onAction="#TaskDemo" prefHeight="67.0" prefWidth="138.0" text="Task Demo" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <font>
+               <Font size="15.0" />
+            </font></Button>
+         <Button layoutX="432.0" layoutY="177.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="138.0" text="Button" GridPane.rowIndex="2" />
+         <Button layoutX="29.0" layoutY="313.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="138.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         <Button layoutX="220.0" layoutY="313.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="138.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+       </GridPane>
+   </children>
+</AnchorPane>

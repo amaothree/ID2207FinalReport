@@ -1,0 +1,25 @@
+server:
+  tomcat.uri-encoding: UTF-8
+  port: 8080
+  address: 0.0.0.0
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+spring:
+  messages:
+    encoding: UTF-8
+  datasource:
+    url: jdbc:mariadb://cloud.itisnot.me:3306/project
+    username: group
+    password: Rainbow6
+    driver-class-name: org.mariadb.jdbc.Driver
+    hikari:
+      connection-timeout: 2000
+  jpa:
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true

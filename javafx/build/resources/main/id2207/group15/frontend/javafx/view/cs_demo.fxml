@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id2207.group15.frontend.javafx.controller.CSDemoController">
+   <children>
+      <GridPane hgap="10.0" layoutX="143.0" layoutY="98.0" vgap="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Customer Name : " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Event Type : " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Expected Attendees : " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Preferences : " GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Food &amp; Drinks : " GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Music : " GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefWidth="138.0" text="Computer &amp; Related Issues : " textAlignment="RIGHT" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+            <Label text="Date From : " GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Date To : " GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label text="Expected Budget : " GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label text="Description : " GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label text="Filming &amp; Photos : " GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label text="Poster &amp; Artwork : " GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Label text="Other Needs :  " GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <TextField fx:id="text_customer" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="text_event" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="text_attendee" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="text_preferences" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="text_food" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="text_music" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField fx:id="text_computer" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField fx:id="text_budget" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextField fx:id="text_description" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextField fx:id="text_film" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <TextField fx:id="text_poster" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <TextField fx:id="text_other" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <DatePicker fx:id="date_from" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <DatePicker fx:id="date_to" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button fx:id="button_submit" mnemonicParsing="false" onAction="#submit" text="Submit/Update" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.rowSpan="9">
+              <content>
+                <AnchorPane minHeight="10.0" minWidth="10.0">
+                     <children>
+                        <ListView fx:id="request_list" onMouseClicked="#info" prefHeight="400.0" prefWidth="247.33333333333334" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
+              </content>
+            </ScrollPane>
+            <Button fx:id="button_new" mnemonicParsing="false" onAction="#resetInfo" text="New" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <Label alignment="CENTER" text="Customer Request" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label text="Request Id : " GridPane.columnIndex="3" />
+            <Label fx:id="text_id" GridPane.columnIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
